@@ -1,0 +1,557 @@
+@font-face {
+  font-family: 'Herculanum';
+  src: url('../fonts/Herculanum\ Regular.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Herculanum',Arial, sans-serif;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: #000;
+  z-index: 1000;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  position: relative;
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.chat-container {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  background-color: #000;
+  padding: 1rem;
+  z-index: 1001;
+}
+
+.chat-input {
+  width: 200px;
+  padding: 0.5rem;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  font-family: 'Herculanum',Arial, sans-serif;
+}
+
+.chat-result {
+  display: none;
+  width: 200px;
+  background-color: #222;
+  color: #fff;
+  padding: 0.5rem;
+  text-align: center;
+  font-family: 'Herculanum',Arial, sans-serif;
+}
+
+.flash-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 72px;
+  background-color: #000;
+  color: #fff;
+  z-index: 9999;
+}
+
+.flash-message-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.flash-message-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 1rem 2rem;
+  margin-top: -1rem;
+}
+
+.hero-logo {
+  max-width: 50%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Intro section */
+.intro {
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.intro h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  display: inline;
+  background-color: rgb(26, 39, 39);
+  color: rgb(26, 39, 39);
+  transition: color 0.3s;
+}
+
+.highlight:hover {
+  color: #fff;
+}
+
+.quote {
+  position: absolute;
+  left: 65%;
+  transform: translateX(-50%);
+  margin-top: 1.2rem;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  display: inline;
+  background-color: rgb(26, 39, 39);
+  color: rgb(26, 39, 39);
+  transition: color 0.3s;
+}
+
+.quote:hover {
+  color: #fff;
+}
+
+.soap-image {
+  display: block;
+  margin: 2rem auto;
+  max-width: 28%;
+  height: auto;
+}
+
+.intro-image {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  width: 13%;
+  transform: rotate(88deg);
+  margin-top: -6%;
+}
+
+.intro-l-image {
+  position: absolute;
+  top: 13rem;
+  left: 3.3rem;
+  width: 13%;
+  transform: rotate(-33deg);
+  margin-top: -6%;
+}
+
+/* Story section */
+.story {
+  margin-top: 1rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.story h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.story-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 4px solid;
+  border-image: linear-gradient(to right, #fc0303, #7d0101) 1;
+}
+
+.story-content p {
+  margin-bottom: 1rem;
+}
+
+.story-image {
+  position: relative;
+  bottom: 20px;
+  left: 3%;
+  transform: rotate(-27deg);
+  width: 16%;
+  height: auto;
+  margin-top: -8%;
+}
+
+.story-l-image {
+  position: absolute;
+  top: 23rem;
+  right: 3.3rem;
+  width: 13%;
+  transform: rotate(33deg);
+  margin-top: -6%;
+}
+
+.story-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.story-navigation button {
+  padding: 0.5rem 1rem;
+  background-color: #fc0303;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: 'Herculanum', Arial, sans-serif;
+  font-size: 1.3rem;
+  border-radius: 20px;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-navigation button:disabled {
+  background-color: #4a2d2d;
+  cursor: not-allowed;
+  font-family: 'Herculanum', Arial, sans-serif;
+  border-radius: 20px;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Economics section */
+.economics {
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.economics img {
+  position: relative;
+  z-index: 1;
+  max-width: 40%;
+}
+
+.economics-table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.economics-table td {
+  padding: 1rem;
+  border: 2px solid #fc0303;
+  vertical-align: middle;
+}
+
+.economics-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.economics-title {
+  font-size: 1.6rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.economics-value {
+  font-size: 2.5rem;
+}
+
+.product-image {
+  max-width: 2.5rem;
+  max-height: auto;
+  object-fit: contain;
+}
+
+/* FAQ section */
+.faq {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3.5rem;
+}
+
+.faq h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.faq-item {
+  margin-bottom: 2rem;
+}
+
+.faq-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.faq-item p {
+  line-height: 1.5;
+}
+
+.faq-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.faq-image {
+  width: 30%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.faq-image-left {
+  position: absolute;
+  transform: rotate(-10deg);
+  top: 0;
+  left: 0;
+  margin-left: -8%;
+  margin-top: 47%;
+  scale: 80%;
+}
+
+.faq-image-right {
+  position: absolute;
+  transform: rotate(13deg);
+  bottom: 0;
+  right: 0;
+  margin-right: -10%;
+  margin-bottom: -13%;
+  scale: 68%;
+}
+
+.faq-l-image-right {
+  position: absolute;
+  transform: rotate(-23deg);
+  top: 0;
+  right: 0;
+  margin-right: -6%;
+  margin-top: 70%;
+  scale: 96%;
+}
+
+.faq-l-image-left {
+  position: absolute;
+  transform: rotate(30deg);
+  bottom: 0;
+  left: 0;
+  margin-left: -1%;
+  margin-bottom: 3%;
+  scale: 73%;
+}
+
+/* Buy section */
+.buy {
+  padding: 2rem;
+  text-align: center;
+  margin-top: -3.5rem;
+}
+
+.buy h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.buy-link {
+  display: inline-block;
+}
+
+.buy-image {
+  max-width: 30%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.buy-image:hover {
+  transform: scale(1.05);
+}
+
+/* Meme Display section */
+.meme-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  min-height: 100vh;
+}
+
+.meme-display h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.meme-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 33%;
+  max-height: 66vh;
+  margin-bottom: 1rem;
+}
+
+.meme-container img {
+  max-width: 100%;
+  max-height: calc(60vh - 50px);
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.meme-display button {
+  position: absolute;
+  bottom: 20vh;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  background-color: #fc0303;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: 'Herculanum', Arial, sans-serif;
+  font-size: 2rem;
+  border-radius: 50px;
+  width: 200px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meme-credit {
+  font-size: 0.8rem;
+  color: #888;
+  text-align: center;
+  margin-top: 0rem;
+}
+
+/* Our Team section */
+.our-team {
+  text-align: center;
+  padding: 2rem;
+}
+
+.our-team h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  width: 45%;
+  margin-bottom: 2rem;
+}
+
+.team-member img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.team-member h3 {
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-member p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background-color: #000;
+  z-index: 1000;
+}
+
+footer nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+footer nav ul li {
+  margin: 0 1rem;
+}
+
+footer nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding-top: 30px; /* Adjust this value based on the height of your header */
+  padding-bottom: 30px; /* Adjust this value based on the height of your footer */
+}
+
+/* Sections */
+section {
+  scroll-margin-top: 5vh;
+}
