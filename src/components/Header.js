@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import Video from '../assets/shutter.mp4';
 
@@ -28,7 +28,7 @@ function Header() {
     chatInput.value = '';
   };
 
-  const handleClickOutside = (event) => {
+  const handleClickOutside = useCallback((event) => {
     const chatContainer = chatContainerRef.current;
     const chatButton = chatButtonRef.current;
 
@@ -39,9 +39,9 @@ function Header() {
     ) {
       blurChatBox();
     }
-  };
+  }, []);
 
-  const handleClickAnywhere = (event) => {
+  const handleClickAnywhere = useCallback((event) => {
     const randomTrigger = Math.random();
     if (randomTrigger < 0.01) {
       flashPage();
@@ -52,7 +52,7 @@ function Header() {
         flashPage();
       }
     }
-  };
+  }, []);
 
   const flashPage = () => {
     const body = document.body;
@@ -154,7 +154,7 @@ function Header() {
           <li><Link to="/faq">FAQ</Link></li>
           <li><Link to="/team">Our Team</Link></li>
           <li>
-            <a href="#" className="chat-btn" onClick={handleChat} ref={chatButtonRef}>
+            <a href="#chat" className="chat-btn" onClick={handleChat} ref={chatButtonRef}>
               Chat
             </a>
             <div className="chat-container" ref={chatContainerRef}>
