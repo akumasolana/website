@@ -555,3 +555,216 @@ main {
 section {
   scroll-margin-top: 5vh;
 }
+
+
+
+/* Media query for mobile devices */
+@media screen and (max-width: 400px) {
+  /* Header */
+  header {
+    padding: 0.5rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 0.5rem;
+  }
+
+  .chat-container {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .chat-input,
+  .chat-result {
+    width: 100%;
+  }
+
+  /* Hero section */
+  .hero {
+    padding: 1rem;
+    margin-top: 0;
+  }
+
+  .hero-logo {
+    max-width: 80%;
+  }
+
+  /* Intro section */
+  .intro {
+    padding: 1rem;
+  }
+
+  .intro h2 {
+    font-size: 2rem;
+  }
+
+  .quote {
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+  }
+
+  .soap-image {
+    max-width: 60%;
+  }
+
+  .intro-image,
+  .intro-l-image {
+    display: none;
+  }
+
+  /* Story section */
+  .story {
+    padding: 1rem;
+  }
+
+  .story h2 {
+    font-size: 2rem;
+  }
+
+  .story-content {
+    padding: 1rem;
+  }
+
+  .story-image,
+  .story-l-image {
+    display: none;
+  }
+
+  .story-navigation button {
+    font-size: 1rem;
+    width: 100px;
+    height: 30px;
+  }
+
+  /* Economics section */
+  .economics {
+    padding: 1rem;
+  }
+
+  .economics img {
+    max-width: 80%;
+  }
+
+  .economics-table {
+    width: 100%;
+  }
+
+  .economics-title {
+    font-size: 1.2rem;
+  }
+
+  .economics-value {
+    font-size: 1.8rem;
+  }
+
+  .product-image {
+    max-width: 1.8rem;
+  }
+
+  /* FAQ section */
+  .faq {
+    padding: 1rem;
+  }
+
+  .faq h2 {
+    font-size: 2rem;
+  }
+
+  .faq-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .faq-image-left,
+  .faq-image-right,
+  .faq-l-image-right,
+  .faq-l-image-left {
+    display: none;
+  }
+
+  /* Buy section */
+  .buy {
+    padding: 1rem;
+    margin-top: 0;
+  }
+
+  .buy h2 {
+    font-size: 2rem;
+  }
+
+  .buy-image {
+    max-width: 60%;
+  }
+
+  /* Meme Display section */
+  .meme-display {
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .meme-display h2 {
+    font-size: 2rem;
+  }
+
+  .meme-container {
+    max-width: 90%;
+    max-height: 50vh;
+  }
+
+  .meme-container img {
+    max-height: calc(50vh - 50px);
+  }
+
+  .meme-display button {
+    bottom: 10vh;
+    font-size: 1.5rem;
+    width: 150px;
+    height: 40px;
+  }
+
+  /* Our Team section */
+  .our-team {
+    padding: 1rem;
+  }
+
+  .our-team h2 {
+    font-size: 2rem;
+  }
+
+  .team-member {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .team-member h3 {
+    font-size: 1.8rem;
+  }
+
+  .team-member p {
+    font-size: 1.2rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 0.5rem;
+  }
+
+  footer nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  footer nav ul li {
+    margin: 0.5rem;
+  }
+
+  main {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
