@@ -73,6 +73,7 @@ function Header() {
       if (flashCount === 6) {
         clearInterval(flashInterval);
         window.location.href = window.location.href;
+        window.location.reload();
       }
     }, 100);
   };
