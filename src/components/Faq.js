@@ -39,7 +39,7 @@ function Faq() {
       <div className="faq-item">
         <h3>How many founders are there?</h3>
         <p>
-            Akuma was brought to life by two visionary founders, <a href="/team">@Sensei</a> and <a href="/team">@jiro</a>. Their combined expertise and passion for Japanese culture and blockchain technology have been instrumental in shaping the project's direction and values.
+            Akuma was brought to life by two visionary founders, Sensei and jiro. Their combined expertise and passion for Japanese culture and blockchain technology have been instrumental in shaping the project's direction and values.
         </p>
       </div>
       <div className="faq-item">

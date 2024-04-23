@@ -24,7 +24,7 @@ function CoinImage({ left }) {
     coinStyle.left = 'auto';
   }
 
-  return <img src={Product} alt="Coin" style={coinStyle} />;
+  return <img src={Product} alt="Coin" className="coin" style={coinStyle} />;
 }
 
 function Economics() {
