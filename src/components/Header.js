@@ -71,7 +71,7 @@ function Header() {
       
       if (flashCount === 6) {
         clearInterval(flashInterval);
-        window.location.reload();
+        window.location.href = window.location.href;
       }
     }, 100);
   };
@@ -118,6 +118,9 @@ function Header() {
                   Look Behind You...
                 </div>
               `;
+              setTimeout(() => {
+                window.location.href = window.location.href; // Add this line
+              }, 2000); // Adjust the delay as needed
             });
           }
         }

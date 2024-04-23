@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Intro from '../components/Intro';
@@ -27,7 +27,7 @@ function App() {
                 <Buy />
               </>
             } />
-            <Route path="/about" element={<Intro />} />
+            <Route path="/" element={<Intro />} />
             <Route path="/memes" element={<MemeDisplay />} />
             <Route path="/tokenomics" element={<Economics />} />
             <Route path="/faq" element={<Faq />} />
