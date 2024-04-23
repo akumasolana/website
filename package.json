@@ -22,7 +22,8 @@
     "@babel/plugin-transform-class-properties": "latest",
     "@babel/plugin-transform-optional-chaining": "latest",
     "@rollup/plugin-terser": "latest",
-    "@jridgewell/sourcemap-codec": "latest"
+    "@jridgewell/sourcemap-codec": "latest",
+    "@babel/plugin-proposal-private-property-in-object": "latest"
   },
   "scripts": {
     "start": "react-scripts start",

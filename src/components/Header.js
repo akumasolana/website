@@ -7,7 +7,8 @@ function Header() {
   const chatInputRef = useRef(null);
   const chatButtonRef = useRef(null);
 
-  const handleChat = () => {
+  const handleChat = (event) => {
+    event.preventDefault(); // Prevent the default behavior of the anchor tag
     const chatContainer = chatContainerRef.current;
     chatContainer.style.display = chatContainer.style.display === 'block' ? 'none' : 'block';
   };
@@ -157,7 +158,7 @@ function Header() {
           <li><Link to="/faq">FAQ</Link></li>
           <li><Link to="/team">Our Team</Link></li>
           <li>
-            <a href="#chat" className="chat-btn" onClick={handleChat} ref={chatButtonRef}>
+            <a href="#" className="chat-btn" onClick={(event) => handleChat(event)} ref={chatButtonRef}>
               Chat
             </a>
             <div className="chat-container" ref={chatContainerRef}>
