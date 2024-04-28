@@ -84,7 +84,7 @@ function Header() {
   
     const flashMessage = `
       <div class="flash-message">
-        I am behind you...
+        Look Behind You...
       </div>
     `;
   
