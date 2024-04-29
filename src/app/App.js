@@ -10,6 +10,7 @@ import MemeDisplay from '../components/MemeDisplay';
 import OurTeam from '../components/OurTeam';
 import Buy from '../components/Buy';
 import Footer from '../components/Footer';
+import ProgressBar from '../components/ProgressBar';
 import './App.css';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
                 <Hero />
                 <Intro />
                 <Story />
+                <ProgressBar />
                 <Buy />
               </>
             } />
