@@ -2,6 +2,10 @@
   font-family: 'Herculanum';
   src: url('../fonts/Herculanum\ Regular.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Nihat';
+  src: url('../fonts/nihat.ttf') format('truetype');
+}
 
 * {
   margin: 0;
@@ -125,11 +129,13 @@ nav ul li a {
   text-align: center;
   padding: 2rem;
   position: relative;
+  font-family: 'Nihat',Arial, sans-serif;
 }
 
 .intro h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  font-family: 'Herculanum',Arial, sans-serif;
 }
 
 .highlight {
@@ -208,6 +214,7 @@ nav ul li a {
 
 .story-content p {
   margin-bottom: 1rem;
+  font-family: 'Nihat',Arial, sans-serif;
 }
 
 .story-image {
@@ -335,6 +342,7 @@ nav ul li a {
 
 .faq-item p {
   line-height: 1.5;
+  font-family: 'Nihat',Arial, sans-serif;
 }
 
 .faq-images {
@@ -516,6 +524,7 @@ nav ul li a {
 .team-member p {
   font-size: 1.6rem;
   line-height: 1.5;
+  font-family: 'Nihat',Arial, sans-serif;
 }
 
 /* Progress Bar */
