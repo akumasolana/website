@@ -13,7 +13,7 @@ function ProgressBar() {
             jsonrpc: '2.0',
             id: 1,
             method: 'getBalance',
-            params: ['HwYWz28tX9iEAWUitMD7b9e8wYdSp5U3P8fErNGesy32'],
+            params: ['Devb72W6J8nrReXCbLvvf15JGXGG9jmVnsTpZJ1xyPLu'],
           },
           {
             headers: {
