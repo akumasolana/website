@@ -33,9 +33,10 @@ function ProgressBar() {
     fetchTokenBalance();
   }, []);
   const benchmarks = [
+    { value: 66, label: 'GANG' },
+    { value: 266, label: 'RICH!' },
     { value: 868, label: 'WAGMI' },
-    { value: 3000, label: 'LAMBO' },
-    { value: 10000, label: 'THE NEXT SLERF' }
+    { value: 1666, label: 'MOON' }
   ];
   const calculateProgressPercentage = () => {
     const maxValue = benchmarks[benchmarks.length - 1].value;
