@@ -542,6 +542,17 @@ nav ul li a {
   margin-bottom: 2rem;
 }
 
+.token-balance-progress-bar p {
+  font-family: 'Nihat',Arial, sans-serif;
+  text-align: center;
+  padding: 1rem;
+}
+
+.token-balance-progress-bar a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .progress-bar-container {
   position: relative;
   width: 80%;

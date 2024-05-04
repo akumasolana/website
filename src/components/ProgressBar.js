@@ -44,7 +44,9 @@ function ProgressBar() {
   };
   return (
     <div className="token-balance-progress-bar">
-      <h2>Track the Progress</h2>
+      <h2>Track the Presale</h2>
+      <p><a href="https://solscan.io/account/Devb72W6J8nrReXCbLvvf15JGXGG9jmVnsTpZJ1xyPLu" target="_blank" rel="noreferrer">Presale V2: Devb72W6J8nrReXCbLvvf15JGXGG9jmVnsTpZJ1xyPLu</a></p>
+      <p><a href="https://solscan.io/account/BuAkYZGK2UyZbnb5jkRpPfay5VvAkoZZ3H1dp6PrGfhy" target="_blank" rel="noreferrer">V1 Burn Address: BuAkYZGK2UyZbnb5jkRpPfay5VvAkoZZ3H1dp6PrGfhy</a></p>
       <div className="progress-bar-container">
         <div className="progress-bar-bg">
           {benchmarks.map((benchmark) => (
