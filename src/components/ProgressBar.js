@@ -3,17 +3,18 @@ import axios from 'axios';
 import pbar from '../assets/pbar.png';
 
 function ProgressBar() {
-  const [tokenBalance, setTokenBalance] = useState(0);
+  const [marketCap, setMarketCap] = useState(0);
+
   useEffect(() => {
-    const fetchTokenBalance = async () => {
+    const fetchMarketCap = async () => {
       try {
         const response = await axios.post(
           'https://docs-demo.solana-mainnet.quiknode.pro/',
           {
             jsonrpc: '2.0',
             id: 1,
-            method: 'getBalance',
-            params: ['Devb72W6J8nrReXCbLvvf15JGXGG9jmVnsTpZJ1xyPLu'],
+            method: 'getTokenSupply',
+            params: ['AKUjRM9ZcE8t4mQWGX8ToroNjrTSYvNR3bBfFMzY7ahb'],
           },
           {
             headers: {
@@ -21,31 +22,49 @@ function ProgressBar() {
             },
           }
         );
+
         if (response.data && response.data.result) {
-          const balance = response.data.result.value/1000000000;
-          setTokenBalance(balance);
-          console.log('Fetched token balance:', balance);
+          const supply = response.data.result.value.uiAmountString;
+          const price = await fetchTokenPrice();
+          const cap = parseFloat(supply) * price;
+          setMarketCap(cap);
+          console.log('Fetched market cap:', cap);
         }
       } catch (error) {
-        console.error('Error fetching token balance:', error);
+        console.error('Error fetching market cap:', error);
       }
     };
-    fetchTokenBalance();
+
+    const fetchTokenPrice = async () => {
+      try {
+        const response = await axios.get(
+          'https://api.dexscreener.com/latest/dex/pairs/solana/bbtw264achklydsfbv6y43v38bukubnxasrzkvgpgpqq'
+        );
+        if (response.data && response.data.pair && response.data.pair.priceUsd) {
+          return parseFloat(response.data.pair.priceUsd);
+        }
+      } catch (error) {
+        console.error('Error fetching token price:', error);
+      }
+      return 0;
+    };
+
+    fetchMarketCap();
   }, []);
   const benchmarks = [
-    { value: 66, label: 'GANG' },
-    { value: 266, label: 'RICH!' },
-    { value: 868, label: 'WAGMI' },
-    { value: 1666, label: 'MOON' }
+    { value: 9000, label: 'GANG' },
+    { value: 30000, label: 'RICH!' },
+    { value: 100000, label: 'WAGMI' },
+    { value: 300000, label: 'MOON' }
   ];
   const calculateProgressPercentage = () => {
     const maxValue = benchmarks[benchmarks.length - 1].value;
-    return (tokenBalance / maxValue) * 100;
+    return (marketCap / maxValue) * 100;
   };
   return (
     <div className="token-balance-progress-bar">
-      <h2>Track the Presale</h2>
-      <p><a href="https://solscan.io/account/Devb72W6J8nrReXCbLvvf15JGXGG9jmVnsTpZJ1xyPLu" target="_blank" rel="noreferrer">Presale V2: Devb72W6J8nrReXCbLvvf15JGXGG9jmVnsTpZJ1xyPLu</a></p>
+      <h2>Track the Market Cap</h2>
+      <p><a href="https://dexscreener.com/solana/bbtw264achklydsfbv6y43v38bukubnxasrzkvgpgpqq" target="_blank" rel="noreferrer">V2 CA: AKUjRM9ZcE8t4mQWGX8ToroNjrTSYvNR3bBfFMzY7ahb</a></p>
       <p><a href="https://solscan.io/account/BuAkYZGK2UyZbnb5jkRpPfay5VvAkoZZ3H1dp6PrGfhy" target="_blank" rel="noreferrer">V1 Burn Address: BuAkYZGK2UyZbnb5jkRpPfay5VvAkoZZ3H1dp6PrGfhy</a></p>
       <div className="progress-bar-container">
         <div className="progress-bar-bg">
