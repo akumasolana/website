@@ -48,6 +48,18 @@ nav ul li a {
   cursor: pointer;
 }
 
+nav p {
+  font-family: 'Nihat',Arial, sans-serif;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ff0000;
+}
+
 .chat-container {
   position: absolute;
   top: 100%;
@@ -115,7 +127,7 @@ nav ul li a {
 .hero {
   text-align: center;
   padding: 1rem 2rem;
-  margin-top: -1rem;
+  margin-top: 0.3rem;
 }
 
 .hero-logo {
@@ -272,10 +284,14 @@ nav ul li a {
 
 /* Economics section */
 .economics {
+  display: flex;
   text-align: center;
   padding: 2rem;
   position: relative;
   overflow: hidden;
+  margin-top: 0.3rem;
+  align-items: center;
+  flex-direction: column;
 }
 
 .economics img {
@@ -318,11 +334,52 @@ nav ul li a {
   object-fit: contain;
 }
 
+/* Buy Instructions section */
+.buy-instructions {
+  text-align: left;
+  padding: 2rem;
+}
+
+.buy-instructions h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.buy-instructions ol {
+  padding-left: 1.5rem;
+}
+
+.buy-instructions li {
+  margin-bottom: 1rem;
+}
+
+.buy-instructions h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.buy-instructions p {
+  font-family: 'Nihat', Arial, sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.buy-instructions ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.buy-instructions a {
+  color: #fff;
+  text-decoration: underline;
+}
+
 /* FAQ section */
 .faq {
   max-width: 800px;
   margin: 0 auto;
   padding: 3.5rem;
+  margin-top: 0.3rem;
 }
 
 .faq h2 {
@@ -448,6 +505,7 @@ nav ul li a {
   padding: 2rem;
   position: relative;
   min-height: 100vh;
+  margin-top: 0.8rem;
 }
 
 .meme-display h2 {
@@ -502,6 +560,7 @@ nav ul li a {
 .our-team {
   text-align: center;
   padding: 2rem;
+  margin-top: 1.3rem;
 }
 
 .our-team h2 {
@@ -551,7 +610,7 @@ nav ul li a {
   text-align: center;
   padding: 2rem;
   font-size: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
 }
 
 .token-balance-progress-bar p {
@@ -779,6 +838,7 @@ section {
   /* Mobile Economics section */
   .economics {
     padding: 0.8rem;
+    margin-top: 2rem;
   }
 
   .economics img {
@@ -801,9 +861,46 @@ section {
     display: none;
   }
 
+/* Mobile Buy Instructions section */
+.buy-instructions h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.buy-instructions ol {
+  padding-left: 1.5rem;
+}
+
+.buy-instructions li {
+  margin-bottom: 0.6rem;
+}
+
+.buy-instructions h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.buy-instructions p {
+  font-family: 'Nihat', Arial, sans-serif;
+  margin-bottom: 0.5rem;
+  font-size: 0.6rem;
+}
+
+.buy-instructions ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.buy-instructions a {
+  color: #fff;
+  text-decoration: underline;
+  font-size: 0.8rem;
+}
+
   /* Mobile FAQ section */
   .faq {
-    margin-top: 1rem;
+    margin-top: 3rem;
     padding: 0.8rem;
   }
 
@@ -926,7 +1023,7 @@ section {
 
   /* Mobile Meme Display section */
   .meme-display {
-    margin-top: 1rem;
+    margin-top: 3rem;
     padding: 0.8rem;
   }
 
@@ -952,7 +1049,7 @@ section {
 
   /* Mobile Our Team section */
   .our-team {
-    margin-top: 1rem;
+    margin-top: 3rem;
     padding: 0.8rem;
   }
 
@@ -1003,7 +1100,7 @@ section {
 
   /* Tablet Hero section */
   .hero {
-    margin-top: 0.8rem;
+    margin-top: 1.3rem;
     padding: 0.8rem;
   }
 
@@ -1056,7 +1153,8 @@ section {
   /* Tablet Economics section */
   .economics {
     padding: 0.8rem;
-    margin-top: 3rem;
+    margin-top: 5rem;
+    align-items: center;
   }
 
   .economics img {
@@ -1081,7 +1179,7 @@ section {
 
   /* Tablet FAQ section */
   .faq {
-    margin-top: 4rem;
+    margin-top: 6rem;
     padding: 0.8rem;
   }
 
@@ -1208,7 +1306,7 @@ section {
 
   /* Tablet Meme Display section */
   .meme-display {
-    margin-top: 4rem;
+    margin-top: 6rem;
     padding: 0.8rem;
   }
 
@@ -1234,7 +1332,7 @@ section {
 
   /* Tablet Our Team section */
   .our-team {
-    margin-top: 4rem;
+    margin-top: 6rem;
     padding: 0.8rem;
   }
 
@@ -1264,4 +1362,97 @@ section {
     padding-top: 15px;
     padding-bottom: 15px;
   }
+}
+
+.jupiter-terminal-container {
+  min-height: 600px;
+  height: 600px;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  margin-top: 2.25rem;
+}
+
+@media (min-width: 1024px) {
+  .jupiter-terminal-container {
+    padding: 1rem;
+  }
+}
+
+.jupiter-terminal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+@media (min-width: 1024px) {
+  .jupiter-terminal-content {
+    flex-direction: row;
+  }
+}
+
+.jupiter-terminal-wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jupiter-terminal-loading {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@media (min-width: 1024px) {
+  .jupiter-terminal-loading {
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+#integrated-terminal {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  max-width: 384px;
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: #282830;
+  border-radius: 0.75rem;
+}
+
+#integrated-terminal.hidden {
+  display: none;
 }

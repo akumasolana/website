@@ -64,8 +64,7 @@ function ProgressBar() {
   return (
     <div className="token-balance-progress-bar">
       <h2>Track the Market Cap</h2>
-      <p><a href="https://dexscreener.com/solana/bbtw264achklydsfbv6y43v38bukubnxasrzkvgpgpqq" target="_blank" rel="noreferrer">V2 CA: AKUjRM9ZcE8t4mQWGX8ToroNjrTSYvNR3bBfFMzY7ahb</a></p>
-      <p><a href="https://solscan.io/account/BuAkYZGK2UyZbnb5jkRpPfay5VvAkoZZ3H1dp6PrGfhy" target="_blank" rel="noreferrer">V1 Burn Address: BuAkYZGK2UyZbnb5jkRpPfay5VvAkoZZ3H1dp6PrGfhy</a></p>
+      <p><a href="https://jup.ag/swap/SOL-AKUjRM9ZcE8t4mQWGX8ToroNjrTSYvNR3bBfFMzY7ahb" target="_blank" rel="noreferrer">CA: AKUjRM9ZcE8t4mQWGX8ToroNjrTSYvNR3bBfFMzY7ahb</a></p>
       <div className="progress-bar-container">
         <div className="progress-bar-bg">
           {benchmarks.map((benchmark) => (

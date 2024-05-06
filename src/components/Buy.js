@@ -3,7 +3,7 @@ import React from 'react';
 function Buy() {
   return (
     <section id="buy" className="buy">
-      <h2>Buy Now</h2>
+      <h2>DexScreener Chart</h2>
       <div className="dexscreener-embed">
         <iframe
           src="https://dexscreener.com/solana/BbTw264achKLYdsFBv6y43V38BuKUBnXasRZKVgpgpqq?embed=1&theme=dark&info=0"

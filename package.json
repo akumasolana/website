@@ -4,10 +4,12 @@
   "private": true,
   "homepage": "https://theakuma.xyz",
   "dependencies": {
+    "@jup-ag/wallet-adapter": "^0.1.8",
     "@testing-library/jest-dom": "latest",
     "@testing-library/react": "latest",
     "@testing-library/user-event": "latest",
     "axios": "^1.6.8",
+    "pnpm": "^9.1.0",
     "react": "latest",
     "react-dom": "latest",
     "react-router-dom": "latest",

@@ -154,8 +154,8 @@ function Header() {
       <nav>
         <ul>
           <li><Link to="/">About</Link></li>
+          <li><Link to="/tokenomics">Buy</Link></li>
           <li><Link to="/memes">Memes</Link></li>
-          <li><Link to="/tokenomics">Tokenomics</Link></li>
           <li><Link to="/faq">FAQ</Link></li>
           <li><Link to="/team">Our Team</Link></li>
           <li>
@@ -174,6 +174,7 @@ function Header() {
             </div>
           </li>
         </ul>
+        <p><a href="https://jup.ag/swap/SOL-AKUjRM9ZcE8t4mQWGX8ToroNjrTSYvNR3bBfFMzY7ahb" target="_blank" rel="noreferrer">CA: AKUjRM9ZcE8t4mQWGX8ToroNjrTSYvNR3bBfFMzY7ahb</a></p>
       </nav>
     </header>
   );
