@@ -5,11 +5,8 @@ const JupiterTerminal = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const passthroughWalletContextState = useWallet();
   const { setShowModal } = useUnifiedWalletContext();
-
-  const rpcUrl = 'https://api.mainnet-beta.solana.com/';
+  const rpcUrl = 'https://attentive-black-snow.solana-mainnet.quiknode.pro/53059c99a614e6626232b4f1e1b3bd4e76e1341d/';
   const formProps = {
-    fixedOutputMint: true,
-    fixedInputMint: true,
     initialOutputMint: "AKUjRM9ZcE8t4mQWGX8ToroNjrTSYvNR3bBfFMzY7ahb",
     initialInputMint: "So11111111111111111111111111111111111111112",
   };
@@ -24,8 +21,6 @@ const JupiterTerminal = () => {
       integratedTargetId: 'integrated-terminal',
       endpoint: rpcUrl,
       formProps,
-      enableWalletPassthrough: simulateWalletPassthrough,
-      passthroughWalletContextState: simulateWalletPassthrough ? passthroughWalletContextState : undefined,
       onRequestConnectWallet: () => setShowModal(true),
       strictTokenList,
       defaultExplorer,

@@ -44,7 +44,13 @@ function BuyInstructions() {
         <li>
           <h3>Get $AKUMA</h3>
           <p>
-            With $SOL in your Phantom wallet, you can now swap it for $AKUMA using the Jupiter Terminal integrated below.
+            With $SOL in your Phantom wallet, you can now swap it for $AKUMA on {' '}
+            <a href="https://raydium.io/swap/?outputCurrency=AKUjRM9ZcE8t4mQWGX8ToroNjrTSYvNR3bBfFMzY7ahb" target="_blank" rel="noopener noreferrer">
+              Raydium
+            </a>{' '} or the {' '}
+            <a href="https://jup.ag/swap/SOL-AKUjRM9ZcE8t4mQWGX8ToroNjrTSYvNR3bBfFMzY7ahb" target="_blank" rel="noopener noreferrer">
+              Jupiter
+            </a>{' '} Integration Below.
           </p>
         </li>
       </ol>

@@ -52,10 +52,11 @@ function ProgressBar() {
     fetchMarketCap();
   }, []);
   const benchmarks = [
-    { value: 9000, label: 'GANG' },
-    { value: 30000, label: 'RICH!' },
     { value: 100000, label: 'WAGMI' },
-    { value: 300000, label: 'MOON' }
+    { value: 200000, label: 'LFG' },
+    { value: 300000, label: 'MOON' },
+    { value: 600000, label: 'KAMI' },
+    { value: 1000000, label: 'NEXT SLERF' },
   ];
   const calculateProgressPercentage = () => {
     const maxValue = benchmarks[benchmarks.length - 1].value;

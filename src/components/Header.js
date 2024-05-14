@@ -174,7 +174,7 @@ function Header() {
             </div>
           </li>
         </ul>
-        <p><a href="https://jup.ag/swap/SOL-AKUjRM9ZcE8t4mQWGX8ToroNjrTSYvNR3bBfFMzY7ahb" target="_blank" rel="noreferrer">CA: AKUjRM9ZcE8t4mQWGX8ToroNjrTSYvNR3bBfFMzY7ahb</a></p>
+        <p><a href="https://jup.ag/swap/SOL-AKUjRM9ZcE8t4mQWGX8ToroNjrTSYvNR3bBfFMzY7ahb" target="_blank" rel="noreferrer">Click to CA: AKUjRM9ZcE8t4mQWGX8ToroNjrTSYvNR3bBfFMzY7ahb</a></p>
       </nav>
     </header>
   );

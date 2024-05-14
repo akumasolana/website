@@ -5,6 +5,7 @@
   "homepage": "https://theakuma.xyz",
   "dependencies": {
     "@jup-ag/wallet-adapter": "^0.1.8",
+    "@mithraic-labs/token-staking": "^1.1.7",
     "@testing-library/jest-dom": "latest",
     "@testing-library/react": "latest",
     "@testing-library/user-event": "latest",
